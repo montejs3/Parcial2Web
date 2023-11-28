@@ -30,7 +30,20 @@
 
 ```bash
 $ npm install
+$ npm install --save @nestjs/typeorm typeorm
+$ npm install pg --save
 ```
+
+## Create 
+Create a module
+```bash
+$  nest g mo museum
+```
+Create a entity
+```bash
+$  nest g cl museum/museum.entity --no-spec
+```
+
 
 ## Running the app
 
