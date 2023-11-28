@@ -34,6 +34,8 @@ $ npm install --save @nestjs/typeorm typeorm
 $ npm install pg --save
 $ npm install sqlite3 --save
 $ npm install @faker-js/faker --save-dev
+$ npm install class-validator --save
+$ npm install class-transformer --save
 ```
 
 ## Create 
@@ -49,7 +51,18 @@ Create a service
 ```bash
 $  nest g s museum
 ```
-
+Create a controlador
+```bash
+$  nest g co museum --no-spec
+```
+Create a interceptor
+```bash
+$  nest g itc shared/interceptors/business-errors --no-spec
+```
+Create a DTO
+```bash
+$  nest g cl museum/museum.dto --no-spec
+```
 ## Running the app
 
 ```bash

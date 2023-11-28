@@ -5,7 +5,7 @@ import { PerformerEntity } from '../performer/performer.entity';
 @Entity()
 export class AlbumEntity {
 
-    @PrimaryGeneratedColumn('uuid')
+    @PrimaryGeneratedColumn()
     id: string;
 
     @Column()

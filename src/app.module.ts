@@ -8,14 +8,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AlbumEntity } from './album/album.entity';
 import { TrackEntity } from './track/track.entity';
 import { PerformerEntity } from './performer/performer.entity';
+import { AlbumTrackModule } from './album-track/album-track.module';
 
 @Module({
   imports: [AlbumModule, TrackModule, PerformerModule,
   TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
-    port: 5444,
-    username: 'enterprisedb',
+    port: 5432,
+    username: 'postgres',
     password: 'admin',
     database: 'musica',
     entities: [ AlbumEntity,TrackEntity, PerformerEntity],
@@ -23,6 +24,7 @@ import { PerformerEntity } from './performer/performer.entity';
     dropSchema: true,
     keepConnectionAlive: true
   }),
+  AlbumTrackModule,
   ],
   controllers: [AppController],
   providers: [AppService],
