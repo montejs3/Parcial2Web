@@ -32,6 +32,8 @@
 $ npm install
 $ npm install --save @nestjs/typeorm typeorm
 $ npm install pg --save
+$ npm install sqlite3 --save
+$ npm install @faker-js/faker --save-dev
 ```
 
 ## Create 
@@ -43,7 +45,10 @@ Create a entity
 ```bash
 $  nest g cl museum/museum.entity --no-spec
 ```
-
+Create a service
+```bash
+$  nest g s museum
+```
 
 ## Running the app
 
