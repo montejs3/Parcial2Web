@@ -15,8 +15,8 @@ import { AlbumTrackModule } from './album-track/album-track.module';
   TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
-    port: 5432,
-    username: 'postgres',
+    port: 5444,
+    username: 'enterprisedb',
     password: 'admin',
     database: 'musica',
     entities: [ AlbumEntity,TrackEntity, PerformerEntity],
