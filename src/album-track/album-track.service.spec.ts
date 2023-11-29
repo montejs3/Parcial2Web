@@ -36,7 +36,7 @@ describe('AlbumTrackService', () => {
     for(let i=0; i<5; i++) {
       const track: TrackEntity = await trackRepository.save({
         nombre: faker.music.genre(),
-        duracion: faker.datatype.number()
+        duracion: faker.number.int()
       })
       trackList.push(track);
     }
@@ -59,7 +59,8 @@ describe('AlbumTrackService', () => {
   it('should add a track to an album', async () => {
     const newTrack: TrackEntity = await trackRepository.save({
       nombre: faker.music.genre(),
-      duracion: faker.datatype.number()
+      duracion: faker.number.int()
+
     });
 
     const newAlbum: AlbumEntity = await albumRepository.save({
