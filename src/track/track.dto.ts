@@ -5,7 +5,6 @@ export class TrackDto {
     nombre: string;
 
     @IsNotEmpty()
-    @IsString()
     duracion: string;
     
 }
