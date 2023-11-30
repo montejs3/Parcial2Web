@@ -23,6 +23,11 @@ export class TrackController {
         return await this.trackService.create(trackDto);
     }
 
+    @Post(':albumId')
+    async createDirectToAlbum(@Param('albumId') albumId: string, @Body() trackDto: any) {
+        return await this.trackService.createDirectToAlbum(albumId, trackDto);
+    }
+
     @Delete(':trackId')
     @HttpCode(204)
     async delete(@Param('trackId') trackId: string) {
