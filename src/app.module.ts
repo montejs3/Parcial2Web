@@ -9,6 +9,7 @@ import { AlbumEntity } from './album/album.entity';
 import { TrackEntity } from './track/track.entity';
 import { PerformerEntity } from './performer/performer.entity';
 import { AlbumTrackModule } from './album-track/album-track.module';
+import { AlbumPerformerModule } from './album-performer/album-performer.module';
 
 @Module({
   imports: [AlbumModule, TrackModule, PerformerModule,
@@ -25,6 +26,7 @@ import { AlbumTrackModule } from './album-track/album-track.module';
     keepConnectionAlive: true
   }),
   AlbumTrackModule,
+  AlbumPerformerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
